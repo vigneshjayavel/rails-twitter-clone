@@ -7,7 +7,9 @@ module ApplicationHelper
     if @title.nil?
       base_title
     else
-      "#{base_title} | #{@title}"
+    	#html escape the title 
+    	#title can contain malicious code as it initially was a user input
+      "#{base_title} | #{h(@title)}"
     end
   end
 
