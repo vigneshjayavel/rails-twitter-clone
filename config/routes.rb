@@ -5,6 +5,7 @@ ActionController::Routing::Routes.draw do |map|
   map.help '/help', :controller => 'pages', :action => 'help'
   map.team '/team', :controller => 'pages', :action => 'team'
   map.root :controller => 'pages', :action => 'home'
+  map.signup '/signup', :controller => 'users', :action => 'new'
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
