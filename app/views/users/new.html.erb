@@ -3,6 +3,7 @@
 </h2>
 <% form_for(@user) do |f| %>
 	<%= f.error_messages %>
+	<%= @user.password =  @user.password_confirmation = "" if @user %>
 	<div class="field">
 		<%= f.label :name %><br>
 		<%= f.text_field :name %>
