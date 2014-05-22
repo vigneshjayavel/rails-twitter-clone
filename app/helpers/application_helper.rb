@@ -17,4 +17,9 @@ module ApplicationHelper
   def logo
   	image_tag("logo.png", :alt => "Sample App", :class => "round")
   end
+
+  #return gravatar img for user
+  def gravatar_image(gravatar_response)
+    (gravatar_response.to_s)[/http\W*[\w\W]*\?/]
+  end
 end
