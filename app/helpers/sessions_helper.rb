@@ -27,6 +27,11 @@ module SessionsHelper
 		!current_user.nil?
 	end
 
+	def authenticate
+      puts "authenticate method"
+      deny_access unless signed_in?
+    end
+
 	def deny_access
 		store_location
 		flash[:notice] = "Please sign in to access this page"

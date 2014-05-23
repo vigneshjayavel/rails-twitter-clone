@@ -1,6 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :sessions, :only => [:new, :create, :destroy]
   map.resources :users
+  map.resources :microposts, :only => [:create, :destroy]
   map.home '/home', :controller => 'pages', :action => 'home'
   map.about '/about', :controller => 'pages', :action => 'about'
   map.contacts '/contacts', :controller => 'pages', :action => 'contacts'
