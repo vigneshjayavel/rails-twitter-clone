@@ -37,6 +37,11 @@ class User < ActiveRecord::Base
 		save_without_validation
 	end
 
+	#tweets feed
+	def feed
+		Micropost.all(:conditions => ["user_id = ?",id])
+	end
+
 	private
 		def encrypt_password
 			unless password.nil?
