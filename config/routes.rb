@@ -3,6 +3,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
   map.resources :microposts, :only => [:create, :destroy]
   map.resources :users, :member => {:following => :get, :followers => :get}
+  map.resources :relationships, :only => [:create, :destroy]
   map.home '/home', :controller => 'pages', :action => 'home'
   map.about '/about', :controller => 'pages', :action => 'about'
   map.contacts '/contacts', :controller => 'pages', :action => 'contacts'
