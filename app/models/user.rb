@@ -50,7 +50,7 @@ class User < ActiveRecord::Base
 
 	#tweets feed
 	def feed
-		Micropost.all(:conditions => ["user_id = ?",id])
+		Micropost.from_users_followed_by(self)
 	end
 
 	def follow!(followed)
