@@ -51,4 +51,8 @@ Spec::Runner.configure do |config|
   # == Notes
   #
   # For more information take a look at Spec::Runner::Configuration and Spec::Runner
+
+  config.before(:each, :behaviour_type => :controller) do
+    rescue_action_in_public!
+  end
 end

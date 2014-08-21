@@ -12,6 +12,8 @@ GEM
       activesupport (= 2.3.18)
     activesupport (2.3.18)
     faker (0.3.1)
+    hoe (3.9.0)
+      rake (>= 0.8, < 11.0)
     mysql2 (0.2.23)
     rack (1.1.6)
     rails (2.3.18)
@@ -22,6 +24,8 @@ GEM
       activesupport (= 2.3.18)
       rake (>= 0.8.3)
     rake (0.8.7)
+    test-unit (1.2.3)
+      hoe (>= 1.5.1)
     will_paginate (2.3.12)
 
 PLATFORMS
@@ -32,4 +36,5 @@ DEPENDENCIES
   mysql2 (~> 0.2.7)
   rails (= 2.3.18)
   rake (= 0.8.7)
+  test-unit
   will_paginate (= 2.3.12)

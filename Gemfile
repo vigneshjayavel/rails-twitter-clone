@@ -8,3 +8,5 @@ gem "mysql2", "~> 0.2.7", :platforms => :ruby_19
 gem "faker", "0.3.1"
 
 gem 'will_paginate', '2.3.12'
+
+gem "test-unit"
