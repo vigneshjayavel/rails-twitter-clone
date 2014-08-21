@@ -3,6 +3,10 @@ require 'spec_helper'
 describe PagesController do
   integrate_views
 
+  before(:each) do
+    @base_title = "Ruby on Rails Sample Application | "
+  end
+
 
   describe "GET 'random_page'" do
     it "should not be successful" do
@@ -20,7 +24,7 @@ describe PagesController do
     it "has correct title" do
       get 'home'
       response.should have_tag("title",
-        "Ruby on Rails Sample Application | Home")
+        @base_title + "Home")
     end
   end
 
@@ -33,7 +37,7 @@ describe PagesController do
     it "has correct title" do
       get 'contacts'
       response.should have_tag("title",
-        "Ruby on Rails Sample Application | Contacts")
+        @base_title + "Contacts")
     end
   end
 
@@ -46,7 +50,7 @@ describe PagesController do
     it "has correct title" do
       get 'about'
       response.should have_tag("title",
-        "Ruby on Rails Sample Application | About")
+        @base_title + "About")
     end
   end
 
@@ -59,7 +63,7 @@ describe PagesController do
     it "has correct title" do
       get 'team'
       response.should have_tag("title",
-        "Ruby on Rails Sample Application | Team")
+        @base_title + "Team")
     end
   end
 
@@ -72,9 +76,8 @@ describe PagesController do
     it "has correct title" do
       get 'help'
       response.should have_tag("title",
-        "Ruby on Rails Sample Application | Help")
+        @base_title + "Help")
     end
   end
-
-
+  
 end
